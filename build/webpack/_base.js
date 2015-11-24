@@ -37,11 +37,11 @@ const webpackConfig = {
     loaders : [
       {
         test : /\.(js|jsx)$/,
-        exclude : /node_modules/,
+        exclude : /(node_modules|bower_components)/,
         loader  : 'babel',
         query   : {
-          stage    : 0,
-          optional : ['runtime'],
+          presets: ['es2015', 'react', 'stage-2'],
+          cacheDirectory: true,
           env      : {
             development : {
               plugins : ['react-transform'],
