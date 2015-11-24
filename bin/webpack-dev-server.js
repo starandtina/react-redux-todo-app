@@ -1,8 +1,8 @@
 require('babel-core/register');
 
 const chalk     = require('chalk');
-const devServer = require('../build/webpack-dev-server');
-const config    = require('../config');
+const devServer = require('../build/webpack-dev-server').default;
+const config    = require('../config').default;
 
 const host = config.get('webpack_host');
 const port = config.get('webpack_port');

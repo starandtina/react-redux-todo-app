@@ -42,19 +42,21 @@ const webpackConfig = {
         query   : {
           presets: ['es2015', 'react', 'stage-0'],
           cacheDirectory: true,
-          env      : {
-            development : {
-              plugins : ['react-transform'],
-              extra   : {
-                'react-transform' : {
-                  transforms : [{
-                    transform : 'react-transform-catch-errors',
-                    imports   : ['react', 'redbox-react']
-                  }]
-                }
-              }
-            }
-          }
+          // https://github.com/gaearon/react-transform-boilerplate
+          // Don’t support Babel 6 yet.
+          // env      : {
+          //   development : {
+          //     plugins : ['react-transform'],
+          //     extra   : {
+          //       'react-transform' : {
+          //         transforms : [{
+          //           transform : 'react-transform-catch-errors',
+          //           imports   : ['react', 'redbox-react']
+          //         }]
+          //       }
+          //     }
+          //   }
+          // }
         }
       },
       {
@@ -86,6 +88,7 @@ const webpackConfig = {
 const commonChunkPlugin = new webpack.optimize.CommonsChunkPlugin(
   'vendor', '[name].js'
 );
+
 commonChunkPlugin.__KARMA_IGNORE__ = true;
 webpackConfig.plugins.push(commonChunkPlugin);
 

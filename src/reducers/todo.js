@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, SHOW_ALL } from 'constants/todo';
+import { ADD_TODO, COMPLETE_TODO, SET_VISIBILITY_FILTER, VisibilityFilters } from 'constants/todo';
+const { SHOW_ALL } = VisibilityFilters;
 
 export function visibilityFilter(state = SHOW_ALL, action) {
   switch (action.type) {

@@ -20,7 +20,10 @@ webpackConfig.plugins.push(
       'unused'    : true,
       'dead_code' : true
     }
-  })
+  }),
+  new webpack.optimize.CommonsChunkPlugin(
+    'vendor', '[name].[hash].js'
+  )
 );
 
 export default webpackConfig;
