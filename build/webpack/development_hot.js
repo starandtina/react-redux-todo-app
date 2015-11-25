@@ -2,15 +2,15 @@ import webpack       from 'webpack';
 import config        from '../../config';
 import webpackConfig from './development';
 
-// webpackConfig.entry.app.push(
-//   `webpack-dev-server/client?${config.get('webpack_public_path')}`,
-//   `webpack/hot/dev-server`
-// );
+webpackConfig.entry.app.push(
+  `webpack-dev-server/client?${config.get('webpack_public_path')}`,
+  `webpack/hot/dev-server`
+);
 
-// webpackConfig.plugins.push(
-//   new webpack.HotModuleReplacementPlugin(),
-//   new webpack.NoErrorsPlugin()
-// );
+webpackConfig.plugins.push(
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.NoErrorsPlugin()
+);
 
 // // We need to apply the react-transform HMR plugin to the Babel configuration,
 // // but _only_ when HMR is enabled. Putting this in the default development

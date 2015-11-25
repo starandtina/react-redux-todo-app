@@ -12,7 +12,7 @@ class App extends Component {
     const { dispatch, visibleTodos, visibilityFilter } = this.props;
     return (
       <div>
-        <h1>todos</h1>
+        <h1>Todo App</h1>
         <AddTodo
           onAddClick={text =>
             dispatch(addTodo(text))

@@ -1,5 +1,7 @@
 import { createConstants } from '../utils';
 
-export default createConstants(
+var aa = createConstants(
   'COUNTER_INCREMENT'
 );
+
+export default aa;
