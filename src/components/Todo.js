@@ -10,6 +10,7 @@ export default class Todo extends Component {
           cursor: this.props.completed ? 'default' : 'pointer'
         }}>
         {this.props.text}
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href={'/todo/' + this.props.index }>Link to {this.props.text}</a>
       </li>
     );
   }
