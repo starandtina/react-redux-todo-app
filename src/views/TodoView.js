@@ -27,6 +27,9 @@ class App extends Component {
           onFilterChange={nextFilter =>
             dispatch(setVisibilityFilter(nextFilter))
           } />
+
+        {/* Render the child route component */}
+        {this.props.children}
       </div>
     );
   }
