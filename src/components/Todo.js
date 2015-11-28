@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { Link } from 'react-router'
 
 export default class Todo extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class Todo extends Component {
           cursor: this.props.completed ? 'default' : 'pointer'
         }}>
         {this.props.text}
-        &nbsp;&nbsp;&nbsp;&nbsp;<a href={'/todo/' + this.props.index }>Link to {this.props.text}</a>
+        <Link to={`/todo/${this.props.index}`}>Link to {this.props.text}</Link>
       </li>
     );
   }
