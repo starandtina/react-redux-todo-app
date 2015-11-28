@@ -14,7 +14,8 @@
     "dev:no-debug": "npm run dev -- --no_debug",
     "test": "node ./node_modules/karma/bin/karma start",
     "test:dev": "npm run test -- --watch",
-    "deploy": "npm run lint && npm run test && npm run compile"
+    "deploy": "npm run lint && npm run test && npm run compile",
+    "www": "npm run compile && browser-sync start --files 'dist/**/*' --server dist/"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "babel-preset-stage-0": "^6.1.18",
     "babel-preset-stage-2": "^6.1.18",
     "babel-preset-stage-3": "^6.1.18",
+    "browser-sync": "2.10.0",
     "chai-as-promised": "^5.1.0",
     "css-loader": "^0.23.0",
     "eslint": "^1.0.0",
